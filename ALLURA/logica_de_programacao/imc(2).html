@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação :: Capturando Dados</title>
+</head>
+
+<body>
+    <h1>Calculando o IMC</h1>
+    <h2>com dados capturados</h2>
+</body>
+
+<script>
+    function linha() {
+        document.write('<hr>')
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        linha();
+    }
+
+    function calculaIMC(altura, peso) {
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+
+    var nome = prompt('Bom dia! Qual é o seu nome?');
+    document.write('Bem vindo, ' + nome + '.');
+    var idade = prompt(nome + ', qual é a sua idade?');
+    document.write(' Você tem ' + idade + ' anos de idade');
+
+    var alturaDoUsuario = prompt('Qual a sua altura (exemplo: 1.71)?');
+    var pesoDoUsuario = prompt('Qual o seu peso atual?')
+    var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+
+    linha();
+    mostra('O seu IMC é: ' + imcDoUsuario.toFixed(2));
+
+    if (imcDoUsuario >= 35) {
+        mostra('Seu IMC indica que você está acima do peso');
+    }
+
+    if (imcDoUsuario >= 18.5 && imcDoUsuario < 35) {
+        mostra('Seu IMC indica que seu peso está alto');
+    }
+
+    if (imcDoUsuario < 18.5) {
+        mostra('Seu IMC está normal, PARABÉNS!')
+    }
+</script>
+
+</html>

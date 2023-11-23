@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação :: IMC</title>
+</head>
+
+<body>
+    <h1>Calculando o IMC</h1>
+</body>
+
+<script>
+
+    function linha() {
+        document.write('<hr>')
+    }
+
+   function mostra(frase) {
+        document.write(frase);
+        linha();
+    }
+
+    function calculaIMC(altura, peso) {
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+
+    var pesoDoPrimo = 83;
+    var alturaDoPrimo = 1.76;
+    var imcDoPrimo = calculaIMC(alturaDoPrimo, pesoDoPrimo).toFixed(2);
+    mostra('O imc do meu primo é: ' + imcDoPrimo);
+    mostra('Ele ainda está ' + (imcDoPrimo - 18.5).toFixed(2) + ' pontos acima do limite da magreza.');
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos do meu time</title>
+</head>
+<body>
+    <h1>Pontos do meu time de futebol</h1>
+    <h4>Vamos ver como está o meu time no campeonato executando variáveis</h4>
+    <hr>
+</body>
+<script>
+    function calculaPontos(vitorias, empates, derrotas) {
+        return (vitorias * 3) + empates + (derrotas * -1);
+    }
+    function calculaPontosDoAdversario(vitoriasDoAdversario, empatesDoAdversario, derrotasDoAdversrio) {
+        return (vitoriasDoAdversario * 3) + empatesDoAdversario + (derrotasDoAdversrio * -1);
+    }
+    function linha() {
+        document.write('<hr>')
+    }
+    function pulalinha() {
+        document.write('<br>')
+    }
+    function mostra(frase) {
+        pulalinha();
+        document.write(frase)
+        linha();
+    }
+    var vitorias = parseInt(
+        prompt('Quantos jogos o CDC FC venceu?'));
+    var empates = parseInt(
+        prompt('Quantos jogos o CDC FC empatou?'));
+    var derrotas = parseInt(
+        prompt('Quantas jogos o CDC FC perdeu?'));
+    var pontos = calculaPontos(vitorias, empates, derrotas);
+
+    var vitoriasDoAdversario = parseInt(
+        prompt('Quantos jogos o ADVERSÁRIO FC venceu?'));
+    var empatesDoAdversario = parseInt(
+        prompt('Quantos jogos o ADVERSÁRIO FC empatou?'));
+    var derrotasDoAdversrio = parseInt(
+        prompt('Quantas jogos o ADVERSÁRIO FC perdeu?'));
+    var pontosDoAdversario = calculaPontosDoAdversario(vitoriasDoAdversario, empatesDoAdversario, derrotasDoAdversrio);
+
+    mostra('Nosso time tem ' + pontos + ' pontos. E o nosso adversário tem '+ pontosDoAdversario + ' pontos!');
+
+    if (pontos >= pontosDoAdversario) {
+        mostra('Que bom, estamos frente do nosso adversário');
+        } else {
+            mostra('Precisamos melhorar!')
+        }
+</script>
+
+</html>

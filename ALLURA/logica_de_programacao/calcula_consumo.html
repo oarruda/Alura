@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</object></title>
+</head>
+
+<body>
+    <h1>Álcool ou Gasolina</h1>
+</body>
+
+<script>
+    var precoDaGasolina = 5.15;
+    var precoDoAlcool = 4.80;
+    var tanqueDeCombustivel = 40;
+    var caminhoComGasolina = 480;
+    var caminhoComAlcool = 300;
+    var consumoDeGasolina = caminhoComGasolina / tanqueDeCombustivel;
+    var consumoDeAlcool = caminhoComAlcool / tanqueDeCombustivel;
+    var precoPorKilometroGasolina = precoDaGasolina / consumoDeGasolina;
+    var precoPorKilometroAlcool = precoDoAlcool / consumoDeAlcool;
+
+    function linha() {
+        document.write('<hr>')
+    }
+    function pulalinha() {
+        document.write('<br>')
+    }
+    function mostra(frase){
+        pulalinha();
+        document.write(frase)
+        linha();
+    }
+
+    document.write('Meu consumo com Gasolina foi de: ' + Math.round(consumoDeGasolina) + ' por litro')
+    pulalinha();
+    document.write('Já meu consumo com Álcool foi de: ' + Math.round(consumoDeAlcool) + ' por litro.')
+    linha();
+    document.write('Meu consumo em R$ com Gasolina foi de: ' + precoPorKilometroGasolina.toFixed(2) + ' por litro')
+    pulalinha();
+    document.write('Já meu consumo em R$ com Álcool foi de: ' + precoPorKilometroAlcool.toFixed(2) + ' por litro.')
+    mostra('Teste de texto 1');
+    mostra('Teste de texto 2');
+    mostra('Teste de texto 3');
+
+</script>
+
+</html>

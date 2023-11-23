@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação :: Dias de vida</title>
+</head>
+
+<body>
+    <h1>Calculando os dias de vida</h1>
+    <h2>com dados capturados</h2>
+</body>
+
+<script>
+
+    function linha() {
+        document.write('<hr>')
+    }
+
+    function espaco() {
+        document.write('<br>')
+    }
+
+    function calculaDiasDeVida() {
+        (idade) * 365
+    }
+
+    function calculaBatimetos() {
+        calculaDiasDeVida() * 24 * 60 * 80
+    }
+
+    var nome = prompt('Qual seu nome?');
+    var idade = prompt(nome + ', Qual a sua idade?');
+    var dias = calculaDiasDeVida(idade);
+    var batimentos = calculaBatimetos(dias);
+
+    document.write(nome + 'você já viveu ' + dias + ' de vida.');
+    linha();
+    espaco()
+    document.write('E seu coração já bateu ' + batimentos + ' vezes.')
+
+</script>
+
+</html>
